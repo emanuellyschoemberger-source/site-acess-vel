@@ -1,0 +1,333 @@
+/* Configurações Globais e Variáveis de Cores */
+:root {
+  --bg-color: #f7f5fb;
+  --text-color: #1a1a1a;
+  --card-bg: #ffffff;
+  
+  /* Esquema Roxo Escuro + Roxo Claro */
+  --primary-color: #4a148c;     /* Roxo escuro principal */
+  --primary-dark: #27005d;      /* Roxo super escuro para cabeçalhos/rodapé */
+  --accent-color: #ba68c8;       /* Roxo claro / Lilás vibrante para detalhes */
+  --light-purple-bg: #f3e5f5;   /* Roxo bem claro para fundos de destaque */
+  
+  --border-color: #4a148c;
+  --focus-ring: #ffea00;
+  --font-size-base: 1rem;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+  --bg-color: #120024;         /* Fundo roxo escuro profundo */
+  --text-color: #f1f1f1;
+  --card-bg: #1f0836;          /* Card em tom roxo fechado */
+  --primary-color: #ce93d8;    /* Roxo claro suave para leitura em fundo escuro */
+  --primary-dark: #0a0014;
+  --accent-color: #e1bee7;      /* Roxo claro pastel */
+  --light-purple-bg: #2d0d4b;
+  --border-color: #ce93d8;
+  --focus-ring: #ffeb3b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Atalho para leitores de tela e navegação via teclado */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-dark);
+  color: var(--accent-color);
+  padding: 8px;
+  z-index: 2000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Foco Visível para Navegação por Teclado */
+button:focus,
+a:focus,
+input:focus {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Barra de Acessibilidade */
+.accessibility-bar {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+  padding: 10px;
+  text-align: right;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--accent-color); /* Detalhe roxo claro */
+}
+
+.accessibility-bar button {
+  background-color: #ffffff;
+  color: var(--primary-dark);
+  border: 2px solid var(--accent-color); /* Borda roxo claro */
+  padding: 6px 12px;
+  margin-left: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.accessibility-bar button:hover {
+  transform: scale(1.05);
+  background-color: var(--accent-color);
+  color: #000000;
+}
+
+/* Cabeçalho e Navegação */
+header {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+  padding: 25px 20px;
+  text-align: center;
+  border-bottom: 4px solid var(--accent-color); /* Detalhe em roxo claro */
+}
+
+header h1 {
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--accent-color);
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Principal */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* Cards e Seções */
+section {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(74, 20, 140, 0.25);
+}
+
+h2 {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--accent-color); /* Linha roxo claro sob os títulos */
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin: 15px 0 10px 0;
+  color: var(--primary-color);
+}
+
+.examples {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.example-card {
+  flex: 1;
+  min-width: 250px;
+  background-color: var(--light-purple-bg); /* Fundo suave em roxo claro */
+  border-left: 5px solid var(--accent-color); /* Destaque lateral roxo claro */
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.step-list {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+pre {
+  background-color: #1a0033;
+  color: #e1bee7; /* Código em tom lilás/roxo claro */
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid var(--accent-color);
+  overflow-x: auto;
+}
+
+/* Quiz Style */
+fieldset {
+  border: 2px solid var(--accent-color);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  background-color: var(--light-purple-bg);
+}
+
+#btn-submit-quiz {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: 2px solid var(--accent-color);
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#btn-submit-quiz:hover {
+  background-color: var(--accent-color);
+  color: #000000;
+}
+
+#quiz-result {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Botão Voltar ao Topo */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: 2px solid var(--accent-color);
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+#btn-back-to-top:hover {
+  transform: scale(1.1);
+  background-color: var(--accent-color);
+  color: #000000;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 4px solid var(--accent-color);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* --- Ajuste no Tamanho das Imagens e Ícones --- */
+.section-icon {
+  width: 800px;
+  height: 360px;
+  vertical-align: middle;
+  margin-right: 10px;
+  object-fit: contain;
+}
+/* --- Imagens e Ícones em Formato Quadradinho (1:1) --- */
+
+/* 1. Imagens Ilustrativas dos Conteúdos */
+.imagem-ilustrativa {
+  width: 560px;             /* Largura fixa do quadrado */
+  height: 200px;            /* Altura fixa igual à largura */
+  object-fit: cover;        /* Recorta a imagem para preencher o quadrado sem distorcer */
+  display: block;
+  margin: 15px auto;        /* Centraliza na tela/card */
+  border-radius: 12px;      /* Cantos levemente arredondados */
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 2. Ícones de Título em Formato Quadradinho Pequeno */
+.section-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-color: var(--light-purple-bg);
+  padding: 5px;
+  border-radius: 8px;       /* Formato quadrado estilizado para o ícone */
+  border: 1px solid var(--accent-color);
+}
+
+/* 3. Flashcards com Formato Quadradinho Proporcional */
+.flashcard {
+  background-color: transparent;
+  width: 220px;             /* Largura fixa do card */
+  height: 220px;            /* Altura igual para ser um quadrado perfeito */
+  flex: none;               /* Mantém o tamanho quadrado exato */
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
