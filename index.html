@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site acessível sobre os 4 Pilares do Pensamento Computacional: Decomposição, Reconhecimento de Padrões, Abstração e Algoritmos.">
+  <title>Pensamento Computacional para Todos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+
+  <div class="accessibility-bar" role="region" aria-label="Controles de Acessibilidade">
+    <button id="btn-decrease" aria-label="Diminuir tamanho da fonte">A-</button>
+    <button id="btn-increase" aria-label="Aumentar tamanho da fonte">A+</button>
+    <button id="btn-theme" aria-label="Alternar entre modo claro e escuro">Tema Escuro</button>
+    <button id="btn-speak" aria-label="Ouvir o conteúdo da página">🔊 Ouvir Página</button>
+  </div>
+
+  <header>
+    <h1>Pensamento Computacional para Todos</h1>
+    <nav aria-label="Navegação Principal">
+      <ul>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#decomposicao">Decomposição</a></li>
+        <li><a href="#padroes">Reconhecimento de Padrões</a></li>
+        <li><a href="#abstracao">Abstração</a></li>
+        <li><a href="#algoritmos">Algoritmos</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2>
+  <img src="https://inovasocial.com.br/wp-content/uploads/2025/12/pensamento-computacional-professores-inovacao-social-inovasocial-01.webp" alt="Ícone de um cérebro com engrenagens conectadas" class="imagem-ilustrativa">
+  
+  <main id="main-content" tabindex="-1">
+
+    <section id="introducao" class="animate-card">
+      <h2>1. Introdução ao Pensamento Computacional</h2>
+      <p>O <strong>Pensamento Computacional</strong> é uma habilidade de resolução de problemas que utiliza estratégias inspiradas na ciência da computação. Ele não serve apenas para programar, mas para estruturar o raciocínio de forma lógica em qualquer área da vida.</p>
+      
+      <h3>Importância na Escola e na Sociedade</h3>
+      <p>Desenvolve a capacidade crítica, a criatividade, o trabalho em equipe e a autonomia para encarar desafios complexos de maneira organizada.</p>
+
+      <h3>Onde é Utilizado?</h3>
+      <p>Na criação de softwares, na organização de processos empresariais, na matemática, na medicina e na solução de pequenos problemas diários.</p>
+    </section>
+
+    <section id="decomposicao" class="animate-card">
+      <h2>2. Decomposição</h2>
+      <p><strong>Definição:</strong> Dividir um problema grande ou complexo em partes menores e mais fáceis de gerenciar.</p>
+      <p><strong>Explicação:</strong> Ao encarar um problema menor por vez, fica muito mais simples encontrar soluções do que tentar resolver tudo de uma só vez.</p>
+      
+      <div class="examples">
+        <article class="example-card">
+          <h3>Exemplo do Cotidiano</h3>
+          <p>Organizar uma festa: em vez de fazer tudo junto, você divide a tarefa em convites, decoração, comida e música.</p>
+        </article>
+        <article class="example-card">
+          <h3>Exemplo na Informática</h3>
+          <p>Desenvolver um aplicativo: o projeto é dividido na criação da tela de login, do banco de dados e da interface do usuário.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="padroes" class="animate-card">
+      <h2>3. Reconhecimento de Padrões</h2>
+      <p><strong>Definição:</strong> Identificar similaridades, tendências ou repetições em problemas conhecidos.</p>
+      <p><strong>Explicação:</strong> Reconhecer padrões nos permite usar experiências passadas para resolver novos problemas de forma mais rápida.</p>
+      
+      <div class="examples">
+        <article class="example-card">
+          <h3>Exemplo do Cotidiano</h3>
+          <p>Identificar o trânsito: perceber que todas as segundas-feiras o trânsito fica mais lento no mesmo horário.</p>
+        </article>
+        <article class="example-card">
+          <h3>Exemplo na Programação</h3>
+          <p>Usar estruturas de repetição (como laços <code>for</code> ou <code>while</code>) para automatizar tarefas que se repetem no código.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="abstracao" class="animate-card">
+      <h2>4. Abstração</h2>
+      <p><strong>Definição:</strong> Filtrar e ignorar os detalhes irrelevantes para focar apenas nas informações essenciais.</p>
+      <p><strong>Explicação:</strong> A abstração simplifica problemas eliminando distrações desnecessárias.</p>
+      <p><strong>Importância:</strong> Permite criar modelos gerais que podem ser aplicados em diversas situações com mais clareza.</p>
+      
+      <article class="example-card">
+        <h3>Exemplo Prático</h3>
+        <p>Um mapa do metrô: ele não mostra árvores ou prédios, apenas as estações e as linhas, que é o que você precisa para se locomover.</p>
+      </article>
+    </section>
+
+    <section id="algoritmos" class="animate-card">
+      <h2>5. Elaboração de Algoritmos</h2>
+      <p><strong>Definição:</strong> Criar uma sequência passo a passo de instruções claras e ordenadas para resolver um problema.</p>
+      <p><strong>Como funciona:</strong> Define-se o ponto de partida, as etapas lógicas na ordem correta e o resultado final esperado.</p>
+      
+      <h3>Exemplo em Linguagem Natural (Receita de Café)</h3>
+      <ol class="step-list">
+        <li>Ferver a água.</li>
+        <li>Colocar o pó de café no filtro.</li>
+        <li>Despejar a água quente sobre o filtro.</li>
+        <li>Servir na xícara.</li>
+      </ol>
+
+      <h3>Exemplo Simples em Pseudocódigo</h3>
+      <pre><code>
+INICIO
+  Se café_pronto == Falso Então
+    Ferver_Agua()
+    Passar_Cafe()
+  FimSe
+  Servir_Cafe()
+FIM
+      </code></pre>
+    
+    </section>
+
+    <section id="quiz" class="animate-card">
+      <h2>Quiz: Teste seus Conhecimentos</h2>
+      <form id="quiz-form">
+        <fieldset>
+          <legend><strong>1. Qual pilar consiste em dividir um problema grande em partes menores?</strong></legend>
+          <label><input type="radio" name="q1" value="A"> Abstração</label><br>
+          <label><input type="radio" name="q1" value="B"> Decomposição</label><br>
+          <label><input type="radio" name="q1" value="C"> Algoritmos</label>
+        </fieldset>
+
+        <fieldset>
+          <legend><strong>2. Ignorar detalhes irrelevantes para focar no essencial é chamado de:</strong></legend>
+          <label><input type="radio" name="q2" value="A"> Reconhecimento de Padrões</label><br>
+          <label><input type="radio" name="q2" value="B"> Algoritmos</label><br>
+          <label><input type="radio" name="q2" value="C"> Abstração</label>
+        </fieldset>
+
+        <button type="button" id="btn-submit-quiz">Enviar Respostas</button>
+      </form>
+      <div id="quiz-result" aria-live="polite"></div>
+    </section>
+
+  </main>
+
+  <button id="btn-back-to-top" aria-label="Voltar ao topo da página">↑ Topo</button>
+
+  <footer>
+    <p>Desenvolvido por: Nome do Integrante 1, Nome do Integrante 2, Nome do Integrante 3</p>
+    <p>Projeto do Curso - Pensamento Computacional & Acessibilidade Web</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
